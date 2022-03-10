@@ -69,4 +69,22 @@ let hogwarts = [
     pet: "Phoenix",
     occupation: "Teacher",
   },
-];
+ ];
+ 
+const membersOfGryffindor = (hogwarts)=> {
+  hogwarts.forEach(({firstName,lastName,house}) => {
+    if (house === "Gryffindor"){
+      console.log(`${firstName} ${lastName}`);
+    }
+  });
+}
+membersOfGryffindor(hogwarts)
+console.log("")
+const whoOwnsPet = (hogwarts)=> {
+  hogwarts.forEach(({firstName,lastName,pet,occupation}) => {
+    if (pet !== null && occupation === "Teacher"){
+      console.log(`${firstName} ${lastName}`)
+    }
+  });
+}
+whoOwnsPet(hogwarts)
